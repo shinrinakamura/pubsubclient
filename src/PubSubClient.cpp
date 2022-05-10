@@ -371,7 +371,7 @@ uint32_t PubSubClient::readPacket(uint8_t* lengthLength) {
 boolean PubSubClient::loop() {
     if (connected()) {  //接続が確率したら
         //ここでコンフリクトが起こる
-            //unsigned long t = millis();         //計算用の時間を取得？コンフリクトを起こさせる  
+            コンフリクトの発生//unsigned long t = millis();         //計算用の時間を取得？コンフリクトを起こさせる  
         //時間の計算
         if ((t - lastInActivity > this->keepAlive*1000UL) || (t - lastOutActivity > this->keepAlive*1000UL)) {
             if (pingOutstanding) {
